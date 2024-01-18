@@ -1,0 +1,9 @@
+<h1>welcome to the <%= @restaurant.name %></h1>
+<p>Address:<%= @restaurant.address %></p>
+<p>Phone Number <%= @restaurant.phone_number %></p>
+<p>Category:<%= @restaurant.category %></p>
+<h1>all the reviews for this restaurant</h1>
+<% @restaurant.reviews.each do |review| %>
+<li>grade   <%= review.rating %></li>
+<li>content   <%= review.content %></li>
+<% end %>
